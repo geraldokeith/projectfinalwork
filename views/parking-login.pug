@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp", rel="stylesheet")
+    link(rel="stylesheet", href="/public/css/style.css")
+    title Login here
+body
+    .titles
+        h2 Login to access the Parking system
+    main.formspace
+        .signup
+            .titles
+                h2 Login here
+
+            form#form.form(action="/login", method="post")
+                .form-control
+                    label Username
+                    input(type="text", name="username", id="username", placeholder="Enter Your username", autocomplete="on")
+                    i.fas.fa-check-circle
+                    i.fas.fa-exclamation-circle
+                    small Error Message
+
+                .form-control
+                    label Email
+                    input(type="text", name="email", id="email", placeholder="Enter Your Email", autocomplete="on")
+                    i.fas.fa-check-circle
+                    i.fas.fa-exclamation-circle
+                    small Error Message
+
+                .form-control
+                    label Password
+                    input(type="password", name="password", id="password", placeholder="Enter Your Password", autocomplete="off")
+                    i.fas.fa-check-circle
+                    i.fas.fa-exclamation-circle
+                    small Error Message
+
+                input.btn(type="submit", value="Submit")
+                br
+                h3 Not registered yet? 
+                a(href="signup.html") Signup here
+
+    script(src="/public/js/script.js")

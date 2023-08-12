@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------- Material CDN  ------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!------------------ css link ----------->
+    <link rel="stylesheet" href="/public/css/style.css">
+
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<div class="container">
+    <aside>
+        <div class="top">
+            <div class="logo">
+                <img src="/images/logo.jpg" alt="">
+                <h2>DOCK<span class="danger">VILLE</span> </h2>
+            </div>
+            
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </div>
+        </div>
+        <div class="sidebar" >
+            <div class="active"><span class="material-icons-sharp">grid_view</span>
+                <h3>Dashboard</h3>
+            </div>
+            <a href="/views/parking-login.html" ><span class="material-icons-sharp">directions_car</span>
+                <h3>parking</h3>
+            </a>
+            <a href="/views/battery-renting-login.html" ><span class="material-icons-sharp">battery_charging_full</span>
+                <h3>Battery Rent Section</h3>
+            </a>
+
+            <a href="/views/tire-clinic-login.html" ><span class="material-icons-sharp">build</span>
+                <h3>Car Tire Clinic</h3>
+            </a>
+        
+            <a href="#"><span class="material-icons-sharp">receipt_long</span>
+                <h3>Orders</h3>
+            </a>
+        
+            <a href="#"><span class="material-icons-sharp">mail_outline</span>
+                <h3>Messages</h3> <span class=" message-count">26</span>
+            </a>
+        
+        
+            <a href="#"><span class="material-icons-sharp">settings</span>
+                <h3>Settings</h3>
+            </a>
+        
+            <a href="#"><span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+
+    <!----------------------- MAIN SECTION ----------- -->
+    <main>
+        <h1>Car Tire Clinic</h1>
+    
+        <!-------------------- INSIGHTS------------- -->
+
+
+        <div class="insights">
+
+        <!------------------ SALES  ------------>
+
+            <div class="sales">
+                <span class="material-icons-sharp">directions_car</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Parking<h3>
+                        <h1>shs.350000</h1>
+                    </div>
+                    
+                    <div class="number">
+                        <h2>42%</h2>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+
+            <!------------------ EXPENSES  ------------>
+
+            <div class="expenses">
+                <span class="material-icons-sharp">battery_charging_full</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Battery Rent Section</h3>
+                        <h1>shs.180000</h1>
+                    </div>
+                    <div class="number">
+                        <h2>51%</h2>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+
+            <!------------------ INCOME  ------------>
+
+            <div class="income">
+                <span class="material-icons-sharp">build</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Car Tire Clinic</h3>
+                        <h1>shs.240000</h1>
+                    </div>
+                    <div class="number">
+                        <h2>44%</h2>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+        
+            <!-------------- END OF INSIGHTS  --------------->
+        </div>
+        <div class="recent-orders" style="margin-bottom: 90px;">
+            <h2>Recent Activities</h2>
+            <table>
+                <thead style="font-size: larger;">
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Service</th>
+                        <th>Rec.No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>salah </td>
+                        <td>076309821</td>
+                        <td>Tire pressure</td>
+                        <td class="primary">TP/0012</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Don kelly</td>
+                        <td>0788436378</td>
+                        <td>Valves</td>
+                        <td class="success">VA/034</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>John Baptist</td>
+                        <td>075348973</td>
+                        <td>Puncture fixing</td>
+                        <td class="warning">PF/097</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Owen Musoke</td>
+                        <td>0702400432</td>
+                        <td>Tire pressure</td>
+                        <td class="primary">TP/0032</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>DODO Peter</td>
+                        <td>075209576</td>
+                        <td>Puncture fixing</td>
+                        <td class="warning">PF/078</td>
+                    </tr>
+                </tbody>
+               
+                <tbody>
+                    <tr>
+                        <td>Musoke Edwin</td>
+                        <td>0783425662</td>
+                        <td>Valves</td>
+                        <td class="success">VA/012</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Allan Musinguzi</td>
+                        <td>0782300482</td>
+                        <td>Tire pressure</td>
+                        <td class="primary">TP/0032</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+  <!------------------ END OF MAIN  ---------->
+
+            <!-------------- RIGHT ------- -->
+  <div class="right">
+      <div class="top">
+            <button id="menu-btn">
+             <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp ">dark_mode</span>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p>Hello <b>Gerald</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="/images/profilegero.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="/public/js/script.js"></script>
+</body>
+</html>

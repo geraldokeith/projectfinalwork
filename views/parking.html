@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------- Material CDN  ------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!------------------ css link ----------->
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Parking</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpg"> 
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/images/logo.jpg" alt="">
+                    <h2>DOCK<span class="danger">VILLE</span> </h2>
+                </div>
+                
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar" >
+                <a href="/views/index.html" class="active"><span class="material-icons-sharp">grid_view</span>
+                    <h3>Home</h3>
+                </a>
+            
+                <a href="parking.html" ><span class="material-icons-sharp">directions_car</span>
+                    <h3>parking</h3>
+                </a>
+                <a href="#" ><span class="material-icons-sharp">battery_charging_full</span>
+                    <h3>Battery Rent Section</h3>
+                </a>
+    
+                <a href="parking.html" ><span class="material-icons-sharp">build</span>
+                    <h3>Car Tire Clinic</h3>
+                </a>
+            
+                <a href="#"><span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+            
+                <a href="#"><span class="material-icons-sharp">mail_outline</span>
+                    <h3>Messages</h3> <span class=" message-count">26</span>
+                </a>
+            
+            
+                <a href="#"><span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+            
+                <a href="#"><span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+    
+        <!----------------------- MAIN SECTION ----------- -->
+        <main>
+            <h1>Parking Section</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            <!-------------------- INSIGHTS------------- -->
+    
+    
+            <div class="insights">
+    
+            <!------------------ SALES  ------------>
+    
+                <div class="sales">
+                    <span class="material-icons-sharp">aspect_ratio</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Occupied Space<h3>
+                            <h1>700</h1>
+                        </div>
+                        
+                        <div class="number">
+                            <h2>70%</h2>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+    
+                <!------------------ EXPENSES  ------------>
+    
+                <div class="expenses">
+                    <span class="material-icons-sharp">crop_square</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Available Space</h3>
+                            <h1>100</h1>
+                        </div>
+                        <div class="number">
+                            <h2>10%</h2>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+    
+                <!------------------ INCOME  ------------>
+    
+                <div class="income">
+                    <span class="material-icons-sharp">square</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Reserved Space</h3>
+                            <h1>200</h1>
+                        </div>
+                        <div class="number">
+                            <h2>20%</h2>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-------------- END OF INSIGHTS  --------------->
+            </div>
+            <div class="client-info">
+                <div class="heading">
+                    <h2>Customer's inform</h2>
+                </div>
+        
+                <form action="" class="form" id="form" onsubmit="return validateForm()">
+                    <div class="form-control">
+                         <label>Gender:</label><br> 
+                        <select id="gender" name="Gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select> 
+                    </div>
+
+                    <div class="form-control">
+                        <label>Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+        
+                    <div class="form-control">
+                        <label>NIN Number</label>
+                        <input type="text" name="idnumber" id="ninname" placeholder="Enter NIN Number" autocomplete="off" >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+        
+                    <div class="form-control">
+                        <label>Receipt Number</label>
+                        <input type="text" name="receiptnumber" id="receipt" placeholder="Enter Receipt Number" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Number Plate</label>
+                        <input type="text" name="regnumber" id="numberplate" placeholder="Enter Number plate" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Vehicle Type:</label><br> 
+                        <select id="type" name="type">  
+                            <option value="male">Select</option>
+                           <option value="female">Trucks</option>
+                           <option value="male">Personal Cars</option>
+                           <option value="male">Coasters</option>
+                           <option value="male">Bodabodas</option>
+                            <datalist id="shifts">
+                            <label for="prices">Prices</label> 
+                               <option value="Day:">
+                               <option value="Night:">
+                               <option value="Less than 3hrs:">
+                           </datalist>
+                           
+                         </select> 
+                   </div>
+                    <div class="form-control">
+                        <label>Telphone</label>
+                        <input type="text" name="telphone" id="telphone" placeholder="Enter phone number" autocomplete="on">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Select Date:</label>
+                        <input type="date" id="date" name="date" required><br>  
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="time">Select Time:</label>
+                        <input type="time" id="time" name="time" required><br>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <button type="submit" value="submit" class="btn">submit</button>
+                    <!-- <input type="submit" value="Submit"> -->
+                </form>
+            </div>
+            <!-- <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>LARVENDER KF102 Drone</td>
+                            <td>36378</td>
+                            <td>Refunded</td>
+                            <td class="danger">Declined</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>Ruko F11  Drone</td>
+                            <td>49347</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>Dron with Camera drone</td>
+                            <td>96996</td>
+                            <td>Paid</td>
+                            <td class="primary">Delivered</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>GPS 4k Drone</td>
+                            <td>22821</td>
+                            <td>Paid</td>
+                            <td class="primary">Delivered</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                   
+                    <tbody>
+                        <tr>
+                            <td>DJI Air 2S</td>
+                            <td>81475</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>Lozenge Drone</td>
+                            <td>00482</td>
+                            <td>Paid</td>
+                            <td class="primary">Delivered</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div> -->
+            </main>
+    
+         <!-------------- RIGHT ------- -->
+  <div class="right">
+    <div class="top">
+          <button id="menu-btn">
+           <span class="material-icons-sharp">menu</span>
+          </button>
+          <div class="theme-toggler">
+              <span class="material-icons-sharp active">light_mode</span>
+              <span class="material-icons-sharp ">dark_mode</span>
+          </div>
+          <div class="profile">
+              <div class="info">
+                  <p>Hello <b>Gerald</b></p>
+                  <small class="text-muted">Admin</small>
+              </div>
+              <div class="profile-photo">
+                  <img src="/images/profilegero.jpg" alt="">
+              </div>
+          </div>
+      </div>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/public/js/script.js"></script>
+
+</body>
+</html>
