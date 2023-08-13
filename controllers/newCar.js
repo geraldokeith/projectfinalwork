@@ -41,8 +41,5 @@ const newCar = async (req, res) => {
 		
 	}
 };
-// editing carform
-const editCar = await car.findOneAndUpdate({_id:req.params.body});
 
-
-module.exports = {newCar, editCar};
+module.exports = {newCar,};
