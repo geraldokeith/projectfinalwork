@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------- Material CDN  ------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!------------------ css link ----------->
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Adminstrator</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpg"> 
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/images/logo.jpg" alt="">
+                    <h2>DOCK<span class="danger">VILLE</span> </h2>
+                </div>
+                
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar" >
+                <a href="/views/index.html" class="active"><span class="material-icons-sharp">grid_view</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="parking.html" ><span class="material-icons-sharp">directions_car</span>
+                    <h3>parking</h3>
+                </a>
+                <a href="#" ><span class="material-icons-sharp">battery_charging_full</span>
+                    <h3>Battery Rent Section</h3>
+                </a>
+    
+                <a href="parking.html" ><span class="material-icons-sharp">build</span>
+                    <h3>Car Tire Clinic</h3>
+                </a>
+            
+                <a href="#"><span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+    
+        <!----------------------- MAIN SECTION ----------- -->
+        <main>
+            <h1>Adminstrator's Section</h1>
+            <!-------------------- INSIGHTS------------- -->
+            <div>
+                <h1>Sector Performance Overview</h1>
+            </div>
+    
+            <div class="insights">
+            
+            <!------------------ SALES  ------------>
+            <div class="sales">
+                <span class="material-icons-sharp">directions_car</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Parking<h3>
+                        <h1>shs.350000</h1>
+                    </div>
+                    
+                    <div class="number">
+                        <h2>42%</h2>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+
+            <!------------------ EXPENSES  ------------>
+
+            <div class="expenses">
+                <span class="material-icons-sharp">battery_charging_full</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Battery Rent Section</h3>
+                        <h1>shs.180000</h1>
+                    </div>
+                    <div class="number">
+                        <h2>51%</h2>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+
+            <!------------------ INCOME  ------------>
+
+            <div class="income">
+                <span class="material-icons-sharp">build</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Car Tire Clinic</h3>
+                        <h1>shs.240000</h1>
+                    </div>
+                    <div class="number">
+                        <h2>44%</h2>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!-------------- END OF INSIGHTS  --------------->
+            </div>
+            <div class="client-info">
+                <div class="heading">
+                    <h2>Register an Employee</h2>
+                </div>
+        
+                <form action="" class="form" id="form" onsubmit="return validateForm()">
+                    <div class="form-control">
+                         <label>Gender:</label><br> 
+                        <select id="gender" name="Gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select> 
+                    </div>
+
+                    <div class="form-control">
+                        <label>First Name</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter firstname" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Last Name</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter lastname" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+        
+                    <div class="form-control">
+                        <label>NIN Number</label>
+                        <input type="text" name="idnumber" id="ninname" placeholder="Enter NIN Number" autocomplete="off" >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+        
+                    <div class="form-control">
+                        <label>Email</label>
+                        <input type="text" name="email" id="email" placeholder="Enter email" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label> Address</label>
+                        <input type="text" name="address" id="address" placeholder="Enter location" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Marital Status:</label><br> 
+                        <select id="type" name="type">  
+                            <option value="male">Select</option>
+                           <option value="female">Single</option>
+                           <option value="male">Married</option>
+                           <option value="male">Others</option>   
+                         </select> 
+                   </div>
+                    <div class="form-control">
+                        <label>Telphone</label>
+                        <input type="text" name="phonenumber" id="phonenumber" placeholder="Enter phone number" autocomplete="on">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Role:</label><br> 
+                        <select id="type" name="type">  
+                            <option value="male">Select</option>
+                           <option value="female">Manager parking</option>
+                           <option value="male">Manager battery section</option>
+                           <option value="male">Manager Car tire Clinic</option>   
+                         </select> 
+                   </div>
+                    <button type="submit" value="submit" class="btn">submit</button>
+                </form>
+            </div>
+             <div class="recent-orders" >
+                <h2>Employees Information</h2>
+                <table style="margin-bottom: 90px;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Telphone</th>
+                            <th>NIN</th>
+                            <th>Address</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Moses Mulindwa</td>
+                            <td>0778345622</td>
+                            <td>CMxxxxxxxxx</td>
+                            <td>Bukoto</td>
+                            <td class="primary">Manager parking</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>Doreen Assimwe</td>
+                            <td>0753436378</td>
+                            <td>CFxxxxxxxxx</td>
+                            <td>Kigowa</td>
+                            <td class="primary">Manager battery section</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>Peter Mukasa</td>
+                            <td>0777349347</td>
+                            <td>CMxxxxxxxxx</td>
+                            <td>Kisaasi</td>
+                            <td class="primary">Manager car tire clinic</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </main>
+    
+         <!-------------- RIGHT ------- -->
+  <div class="right">
+    <div class="top">
+          <button id="menu-btn">
+           <span class="material-icons-sharp">menu</span>
+          </button>
+          <div class="theme-toggler">
+              <span class="material-icons-sharp active">light_mode</span>
+              <span class="material-icons-sharp ">dark_mode</span>
+          </div>
+          <div class="profile">
+              <div class="info">
+                  <p>Hello <b>Gerald</b></p>
+                  <small class="text-muted">Admin</small>
+              </div>
+              <div class="profile-photo">
+                  <img src="/images/profilegero.jpg" alt="">
+              </div>
+          </div>
+      </div>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/public/js/script.js"></script>
+
+</body>
+</html>
