@@ -17,6 +17,7 @@ const newCar = async (req, res) => {
 		}
 
 		const newCar = new car({
+			gender: req.body.gender,
 			name: req.body.name,
 			numberplate: req.body.numberplate,
 			phonenumber: req.body.phonenumber,
@@ -42,4 +43,4 @@ const newCar = async (req, res) => {
 	}
 };
 
-module.exports = {newCar,};
+module.exports = {newCar};

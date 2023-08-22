@@ -1,0 +1,228 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // ----------- Material CDN  -----
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons+Sharp' rel='stylesheet')
+  // ---------------- css link ---------
+  link(rel='stylesheet' href='/public/css/style.css')
+  title Car Tire Clinic
+.container
+  aside
+    .top
+      .logo
+        img(src='/images/logo.jpg' alt='')
+        h2
+          | DOCK
+          span.danger VILLE
+      #close-btn.close
+        span.material-icons-sharp close
+    .sidebar
+      a.active(href='/views/index.html')
+        span.material-icons-sharp grid_view
+        h3 Home
+      a(href='/views/parking-login.html')
+        span.material-icons-sharp directions_car
+        h3 parking
+      a(href='#')
+        span.material-icons-sharp battery_charging_full
+        h3 Battery Rent Section
+      a(href='parking.html')
+        span.material-icons-sharp build
+        h3 Car Tire Clinic
+      a(href='#')
+        span.material-icons-sharp receipt_long
+        h3 Orders
+      a(href='#')
+        span.material-icons-sharp mail_outline
+        h3 Messages
+        span.message-count 26
+      a(href='#')
+        span.material-icons-sharp settings
+        h3 Settings
+      a(href='#')
+        span.material-icons-sharp logout
+        h3 Logout
+  // --------------------- MAIN SECTION -----------
+  main
+    h1 Car Tire Clinic
+    .insights
+      // ---------------- SALES  ----------
+      .sales
+        span.material-icons-sharp thermostat
+        .middle
+          .left
+            h1
+              | Valves
+              h1
+                h3 Activities
+          .number
+            h2 10
+        small.text-muted Today
+      // ---------------- EXPENSES  ----------
+      .expenses
+        span.material-icons-sharp build_circle
+        .middle
+          .left
+            h1 Puncture Fixing
+            h3 Available
+          .number
+            h2 35
+        small.text-muted Today
+      // ---------------- INCOME  ----------
+      .income
+        span.material-icons-sharp local_gas_station
+        .middle
+          .left
+            h1 Tire pressure
+            h3 Activities
+          .number
+            h2 08
+        small.text-muted Today
+      // ------------ END OF INSIGHTS  -------------
+    .client-info(style='margin-bottom: 90px;')
+      .heading
+        h2  Enter Customer Details
+      form#form.form(action='/api/car-tire' method='POST' name='tires' )
+        .form-control
+          label Name
+          input#name(type='text' name='name' placeholder='Enter Your Name' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label NIN Number
+          input#ninname(type='text' name='idnumber' placeholder='Enter NIN Number' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Gender:
+          br
+          select#gender(name='gender')
+            label Gender
+            option(value='select') Select
+            option(value='male') Male
+            option(value='female') Female
+        .form-control
+          label Services:
+          br
+          select#services(name='services')
+            label Services
+            option(value='select') Select
+            option(value='valves') valves
+            option(value='tire') Tire pressure
+            option(value='puncture') Puncture Fixing
+        .form-control
+          label Tiresize:
+          br
+          select#services(name='tiresize')
+            label Tiresize
+            option(value='select') Select
+            option(value='small') Small
+            option(value='medium') Medium
+            option(value='large') Large
+        .form-control
+          label Prices:
+          br
+          select#prices(name='prices')
+            label Price:
+            option(value='select') Select
+            option(value='price') 5000ugx
+            option(value='price') 500ugx
+        .form-control
+          label Receipt Number
+          input#receipt(type='text' name='receiptnumber' placeholder='Enter Receipt Number' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Telphone
+          input#phonenumber(type='text' name='phonenumber' placeholder='Enter phone number' autocomplete='on')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Select Date:
+          input#date(type='date' name='date' required='')
+          br
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label(for='time') Select Time:
+          input#time(type='time' name='time' required='')
+          br
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        input.btn(type='submit' value='Submit')
+    .recent-orders(style='margin-bottom: 90px;')
+      h2 Recent Activities
+      table
+        thead(style='font-size: larger;')
+          tr
+            th Name
+            th Contact
+            th Service
+            th Rec.No
+        tbody
+          tr
+            td salah 
+            td 076309821
+            td Tire pressure
+            td.primary TP/0012
+        tbody
+          tr
+            td Don kelly
+            td 0788436378
+            td Valves
+            td.success VA/034
+        tbody
+          tr
+            td John Baptist
+            td 075348973
+            td Puncture fixing
+            td.warning PF/097
+        tbody
+          tr
+            td Owen Musoke
+            td 0702400432
+            td Tire pressure
+            td.primary TP/0032
+        tbody
+          tr
+            td DODO Peter
+            td 075209576
+            td Puncture fixing
+            td.warning PF/078
+        tbody
+          tr
+            td Musoke Edwin
+            td 0783425662
+            td Valves
+            td.success VA/012
+        tbody
+          tr
+            td Allan Musinguzi
+            td 0782300482
+            td Tire pressure
+            td.primary TP/0032
+  // ------------ RIGHT -------
+  .right
+    .top
+      button#menu-btn
+        span.material-icons-sharp menu
+      .theme-toggler
+        span.material-icons-sharp.active light_mode
+        span.material-icons-sharp dark_mode
+      .profile
+        .info
+          p
+            | Hello 
+            b Gerald
+          small.text-muted Admin
+        .profile-photo
+          img(src='/images/profilegero.jpg' alt='')
+    script(src='form.js')
+    script(src='/public/js/script.js')

@@ -27,32 +27,18 @@
                 <a href="/views/index.html" class="active"><span class="material-icons-sharp">grid_view</span>
                     <h3>Home</h3>
                 </a>
-            
+                <a href="/views/admin-login.html" ><span class="material-icons-sharp">shield</span>
+                    <h3>Adminstrator</h3>
+                </a>
                 <a href="/views/parking-login.html" ><span class="material-icons-sharp">directions_car</span>
                     <h3>parking</h3>
                 </a>
-                <a href="#" ><span class="material-icons-sharp">battery_charging_full</span>
-                    <h3>Battery Rent Section</h3>
-                </a>
     
-                <a href="parking.html" ><span class="material-icons-sharp">build</span>
+                <a href="/views/tire-clinic-login.html" ><span class="material-icons-sharp">build</span>
                     <h3>Car Tire Clinic</h3>
                 </a>
             
-                <a href="#"><span class="material-icons-sharp">receipt_long</span>
-                    <h3>Orders</h3>
-                </a>
-            
-                <a href="#"><span class="material-icons-sharp">mail_outline</span>
-                    <h3>Messages</h3> <span class=" message-count">26</span>
-                </a>
-            
-            
-                <a href="#"><span class="material-icons-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-            
-                <a href="#"><span class="material-icons-sharp">logout</span>
+                <a href="/views/index.html"><span class="material-icons-sharp">logout</span>
                     <h3>Logout</h3>
                 </a>
             </div>
@@ -60,7 +46,7 @@
     
         <!----------------------- MAIN SECTION ----------- -->
         <main>
-            <h1>Battery/Boda boda Section</h1>
+            <h1>Battery Section</h1>
             <div class="insights">
     
             <!------------------ SALES  ------------>
@@ -118,10 +104,10 @@
                     <h2> Enter Customer's inform</h2>
                 </div>
         
-                <form action="" class="form" id="form">
+                <form action="/api/Battery" class="form" name="battery" id="form" method="POST">
                     <div class="form-control">
                          <label>Gender:</label><br> 
-                        <select id="gender" name="Gender">
+                        <select id="gender" name="gender">
                             <label>Gender</label>
                             <option value="uganda">Male</option>
                             <option value="kenya">Female</option>
@@ -143,10 +129,23 @@
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
-        
+                    <div class="form-control">
+                        <label>Battery size</label>
+                        <input type="text" name="batterysize" id="size" placeholder="Enter size" autocomplete="off" >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Battery price:</label>
+                        <input type="text" name="price" id="price" placeholder="Enter size" autocomplete="off" >
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
                     <div class="form-control">
                         <label>Receipt Number</label>
-                        <input type="text" name="receiptnumber" id="receipt" placeholder="Enter Receipt Number" autocomplete="off">
+                        <input type="text" name="receipt" id="receipt" placeholder="Enter Receipt Number" autocomplete="off">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
@@ -154,7 +153,7 @@
 
                     <div class="form-control">
                         <label>Telphone</label>
-                        <input type="text" name="" id="telphone" placeholder="Enter phone number" autocomplete="on">
+                        <input type="text" name="phonenumber" id="telphone" placeholder="Enter phone number" autocomplete="on">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
@@ -173,10 +172,10 @@
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
+                    
                     <input type="submit" value="Submit" class="btn">
                 </form>
             </div>
-            
             </main>
     
          <!-------------- RIGHT ------- -->

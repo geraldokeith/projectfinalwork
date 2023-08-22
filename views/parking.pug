@@ -1,0 +1,169 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // ----------- Material CDN  -----
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons+Sharp' rel='stylesheet')
+  // ---------------- css link ---------
+  link(rel='stylesheet' href='/css/style.css')
+  title Parking
+  link(rel='icon' type='image/x-icon' href='/images/logo.jpg')
+.container
+  aside
+    .top
+      .logo
+        img(src='/images/logo.jpg' alt='')
+        h2
+          | DOCK
+          span.danger VILLE
+      #close-btn.close
+        span.material-icons-sharp close
+    .sidebar
+      a.active(href='/views/index.html')
+        span.material-icons-sharp grid_view
+        h3 Home
+      a(href='/views/admin-login.html')
+        span.material-icons-sharp shield
+        h3 Adminstrator
+      a(href='/views/battery-renting-login.html')
+        span.material-icons-sharp battery_charging_full
+        h3 Battery Rent Section
+      a(href='/views/tire-clinic-login.html')
+        span.material-icons-sharp build
+        h3 Car Tire Clinic
+      br
+      br
+      a(href='/views/index.html')
+        span.material-icons-sharp logout
+        h3 Logout
+  // --------------------- MAIN SECTION -----------
+  main
+    h1 Parking Section
+    // ------------------ INSIGHTS-------------
+    .insights
+      // ---------------- SALES  ----------
+      .sales
+        span.material-icons-sharp aspect_ratio
+        .middle
+          .left
+            h3
+              | Occupied Space
+              h3
+                h1 140
+          .number
+            h2 70%
+        small.text-muted Last 24 Hours
+      // ---------------- EXPENSES  ----------
+      .expenses
+        span.material-icons-sharp crop_square
+        .middle
+          .left
+            h3 Available Space
+            h1 20
+          .number
+            h2 10%
+        small.text-muted Last 24 Hours
+      // ---------------- INCOME  ----------
+      .income
+        span.material-icons-sharp square
+        .middle
+          .left
+            h3 Reserved Space
+            h1 40
+          .number
+            h2 20%
+        small.text-muted Last 24 Hours
+      // ------------ END OF INSIGHTS  -------------
+    .client-info(style='margin-bottom: 90px;')
+      .heading
+        h2 Customer&apos;s inform
+      form(name='parkingform' method='POST' action='/api/regcar')
+        .form-control
+          label Gender:
+          br
+          select#gender(name='gender')
+            option(value='male') Male
+            option(value='female') Female
+        .form-control
+          label Name
+          input#name(type='text' name='name' placeholder='Enter Your Name' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label NIN Number
+          input#ninname(type='text' name='idnumber' placeholder='Enter NIN Number' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Telphone
+          input#telphone(type='text' name='phonenumber' placeholder='Enter phone number' autocomplete='on')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Receipt Number
+          input#receipt(type='text' name='receiptnumber' placeholder='Enter Receipt Number' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Number Plate
+          input#numberplate(type='text' name='regnumber' placeholder='Enter Number plate' autocomplete='off')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Vehicle Type:
+          br
+          select#type(name='cartype')
+            option(value='select') Select
+            option(value='trucks') Truck
+            option(value='personal') Personal-Car
+            option(value='coaster') Coaster
+            option(value='Bodabodas') Bodaboda
+        .form-control
+          label(for='carColor') Car Color:
+          input#carColor(type='color' name='carColor' value='#ff0000' required='')
+          br
+        .form-control
+          label Price
+          input#price(type='text' name='price' placeholder='Enter price' autocomplete='on')
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label Select Date:
+          input#date(type='date' name='date' required='')
+          br
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        .form-control
+          label(for='time') Select Time:
+          input#time(type='time' name='time' required='')
+          br
+          i.fas.fa-check-circle
+          i.fas.fa-exclamation-circle
+          small Error Message
+        button.btn(type='submit' value='submit') submit
+        // <input type="submit" value="Submit">
+  // ------------ RIGHT -------
+  .right
+    .top
+      button#menu-btn
+        span.material-icons-sharp menu
+      .theme-toggler
+        span.material-icons-sharp.active light_mode
+        span.material-icons-sharp dark_mode
+      .profile
+        .info
+          p
+            | Hello 
+            b Gerald
+          small.text-muted Admin
+        .profile-photo
+          img(src='/images/profilegero.jpg' alt='')
+    script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+    script(src='/public/js/script.js')

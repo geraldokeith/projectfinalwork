@@ -27,32 +27,18 @@
                 <a href="/views/index.html" class="active"><span class="material-icons-sharp">grid_view</span>
                     <h3>Home</h3>
                 </a>
-            
-                <a href="parking.html" ><span class="material-icons-sharp">directions_car</span>
-                    <h3>parking</h3>
+                <a href="/views/admin-login.html" ><span class="material-icons-sharp">shield</span>
+                    <h3>Adminstrator</h3>
                 </a>
-                <a href="#" ><span class="material-icons-sharp">battery_charging_full</span>
+                <a href="/views/battery-renting-login.html" ><span class="material-icons-sharp">battery_charging_full</span>
                     <h3>Battery Rent Section</h3>
                 </a>
     
-                <a href="parking.html" ><span class="material-icons-sharp">build</span>
+                <a href="/views/tire-clinic-login.html" ><span class="material-icons-sharp">build</span>
                     <h3>Car Tire Clinic</h3>
-                </a>
+                </a><br><br>
             
-                <a href="#"><span class="material-icons-sharp">receipt_long</span>
-                    <h3>Orders</h3>
-                </a>
-            
-                <a href="#"><span class="material-icons-sharp">mail_outline</span>
-                    <h3>Messages</h3> <span class=" message-count">26</span>
-                </a>
-            
-            
-                <a href="#"><span class="material-icons-sharp">settings</span>
-                    <h3>Settings</h3>
-                </a>
-            
-                <a href="#"><span class="material-icons-sharp">logout</span>
+                <a href="/views/index.html"><span class="material-icons-sharp">logout</span>
                     <h3>Logout</h3>
                 </a>
             </div>
@@ -61,12 +47,8 @@
         <!----------------------- MAIN SECTION ----------- -->
         <main>
             <h1>Parking Section</h1>
-            <div class="date">
-                <input type="date">
-            </div>
             <!-------------------- INSIGHTS------------- -->
-    
-    
+
             <div class="insights">
     
             <!------------------ SALES  ------------>
@@ -76,7 +58,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Occupied Space<h3>
-                            <h1>700</h1>
+                            <h1>140</h1>
                         </div>
                         
                         <div class="number">
@@ -93,7 +75,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Available Space</h3>
-                            <h1>100</h1>
+                            <h1>20</h1>
                         </div>
                         <div class="number">
                             <h2>10%</h2>
@@ -109,7 +91,7 @@
                     <div class="middle">
                         <div class="left">
                             <h3>Reserved Space</h3>
-                            <h1>200</h1>
+                            <h1>40</h1>
                         </div>
                         <div class="number">
                             <h2>20%</h2>
@@ -119,12 +101,12 @@
                 </div>
                 <!-------------- END OF INSIGHTS  --------------->
             </div>
-            <div class="client-info">
+            <div class="client-info" style="margin-bottom: 90px;">
                 <div class="heading">
                     <h2>Customer's inform</h2>
                 </div>
         
-                <form action="" class="form" id="form" onsubmit="return validateForm()">
+                <form name="parkingform"  method="POST" action="/api/car">
                     <div class="form-control">
                          <label>Gender:</label><br> 
                         <select id="gender" name="Gender">
@@ -148,10 +130,23 @@
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
-        
+                    <div class="form-control">
+                        <label>Telphone</label>
+                        <input type="text" name="telphone" id="telphone" placeholder="Enter phone number" autocomplete="on">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
                     <div class="form-control">
                         <label>Receipt Number</label>
                         <input type="text" name="receiptnumber" id="receipt" placeholder="Enter Receipt Number" autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Car Model</label>
+                        <input type="text" name="carmodel" id="carmodel" placeholder="Enter Car Model" autocomplete="off">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
@@ -166,23 +161,20 @@
                     <div class="form-control">
                         <label>Vehicle Type:</label><br> 
                         <select id="type" name="type">  
-                            <option value="male">Select</option>
-                           <option value="female">Trucks</option>
-                           <option value="male">Personal Cars</option>
-                           <option value="male">Coasters</option>
-                           <option value="male">Bodabodas</option>
-                            <datalist id="shifts">
-                            <label for="prices">Prices</label> 
-                               <option value="Day:">
-                               <option value="Night:">
-                               <option value="Less than 3hrs:">
-                           </datalist>
-                           
+                            <option value="select">Select</option>
+                           <option value="trucks">Trucks</option>
+                           <option value="personal">Personal Car</option>
+                           <option value="coaster">Coaster</option>
+                           <option value="Bodabodas">Bodaboda</option>   
                          </select> 
                    </div>
+                   <div class="form-control">
+                    <label for="carColor">Car Color:</label>
+                    <input type="text" name="carcolor" id="price" placeholder="Enter color" autocomplete="on">
+                   </div>
                     <div class="form-control">
-                        <label>Telphone</label>
-                        <input type="text" name="telphone" id="telphone" placeholder="Enter phone number" autocomplete="on">
+                        <label>Price</label>
+                        <input type="text" name="price" id="price" placeholder="Enter price" autocomplete="on">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
@@ -201,89 +193,10 @@
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error Message</small>
                     </div>
-                    <button type="submit" value="submit" class="btn">submit</button>
-                    <!-- <input type="submit" value="Submit"> -->
+            
+                    <input type="submit" value="Submit" class="btn">
                 </form>
             </div>
-            <!-- <div class="recent-orders">
-                <h2>Recent Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Product Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Foldable Mini Drone</td>
-                            <td>85631</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>LARVENDER KF102 Drone</td>
-                            <td>36378</td>
-                            <td>Refunded</td>
-                            <td class="danger">Declined</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>Ruko F11  Drone</td>
-                            <td>49347</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>Dron with Camera drone</td>
-                            <td>96996</td>
-                            <td>Paid</td>
-                            <td class="primary">Delivered</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>GPS 4k Drone</td>
-                            <td>22821</td>
-                            <td>Paid</td>
-                            <td class="primary">Delivered</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                   
-                    <tbody>
-                        <tr>
-                            <td>DJI Air 2S</td>
-                            <td>81475</td>
-                            <td>Due</td>
-                            <td class="warning">Pending</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>Lozenge Drone</td>
-                            <td>00482</td>
-                            <td>Paid</td>
-                            <td class="primary">Delivered</td>
-                            <td class="primary">Details</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#">Show All</a>
-            </div> -->
             </main>
     
          <!-------------- RIGHT ------- -->
